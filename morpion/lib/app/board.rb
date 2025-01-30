@@ -31,5 +31,13 @@ class Board
       ['A1', 'A2', 'A3'], ['B1', 'B2', 'B3'], ['C1', 'C2', 'C3'],
       ['A1', 'B2', 'C3'], ['C1', 'B2', 'A3']
     ]
+  
+    winning_combinations.any? do |combination|
+      combination.all? { |cell| @board[cell] == player }
+    end
+  end
+
+  def full?
+    @board.values.all? { |cell| cell != ' ' }
   end
 end

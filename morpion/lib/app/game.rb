@@ -1,5 +1,5 @@
-require 'player'
-require 'board'
+require_relative 'player'
+require_relative 'board'
 
 
 class Game
