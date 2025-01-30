@@ -36,7 +36,7 @@ class Board
       ['A1', 'A2', 'A3'], ['B1', 'B2', 'B3'], ['C1', 'C2', 'C3'],
       ['A1', 'B2', 'C3'], ['C1', 'B2', 'A3']
     ]
-
+    # Prend chaque cellule de la combinaison et vérifie si la valeur de cette cellule sur le plateau de jeu (@board[cell]) est égale au symbole du joueur (player).
     winning_combinations.any? do |combination|
       combination.all? { |cell| @board[cell] == player }
     end

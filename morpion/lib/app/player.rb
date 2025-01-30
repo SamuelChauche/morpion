@@ -2,11 +2,11 @@
 class Player
   attr_reader :symbol, :name
 
-  def initialize(symbol)
+  def initialize(symbol, name = nil)
     # Initialise le symbole du joueur ('X' ou 'O').
     @symbol = symbol
-    # Demande le prénom du joueur.
-    @name = get_name
+    # Si le prénom n'est pas fourni, demande le prénom du joueur.
+    @name = name || get_name
   end
 
   # Demande le prénom du joueur.
