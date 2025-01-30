@@ -1,7 +1,11 @@
+require 'player'
+require 'board'
+
+
 class Game
   def initialize
     @board = Board.new
-    @players = [Player.new('X'), Player.new('O')]
+    @players = [Player.new('❌'), Player.new('⭕')]
     @current_player_index = 0
   end
 
