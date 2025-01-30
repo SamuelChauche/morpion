@@ -29,8 +29,8 @@ class Game
           @board.display
           # Affiche un message de victoire.
           puts "#{@players[@current_player_index].name} (#{@players[@current_player_index].symbol}) wins!"
-          # Termine la boucle et le jeu.
-          break
+          # Termine la boucle et relance une nouvelle partie.
+          Game.new
         # Vérifie si le plateau est plein (match nul).
         elsif @board.full?
           # Affiche le plateau de jeu.
